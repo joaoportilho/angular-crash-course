@@ -1,3 +1,5 @@
+<app-add-task (onAddTask)="addTask($event)"></app-add-task> 
+<!-- // o uso do $event aqui é para obter o valor da task em questão -->
 @for (task of tasks; track $index) {
     <app-task-item (onDeleteTask)="deleteTask(task)" (onToggleReminder)="toggleReminder(task)" [task]="task"></app-task-item>
 }
